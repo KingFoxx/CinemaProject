@@ -4,12 +4,15 @@ import NavbarMain from "./components/NavbarMain";
 import Home from "./home/home";
 const App = () => {
   return (
-    
-      <header className="App">
-      <NavbarMain />
-      <Home/>
+    <div className="App">
+      <header>
+        <NavbarMain />
       </header>
-  )
+      <body>
+        <Home />
+      </body>
+    </div>
+  );
 };
 
 export default App;
