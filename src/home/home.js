@@ -1,5 +1,8 @@
 import { Carousel } from "react-bootstrap";
 import "../App.css";
+import batman from "../Images/batman.jpeg";
+import spiderMan from "../Images/Spider-man.jpg";
+import shangChi from "../Images/shang-chi.jpg";
 
 const Home = () => {
   return (
@@ -9,8 +12,8 @@ const Home = () => {
         <Carousel>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=First slide&bg=373940"
+              className="carousel-img"
+              src={batman}
               alt="First slide"
             />
             <Carousel.Caption>
@@ -20,8 +23,8 @@ const Home = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Second slide&bg=282c34"
+              className="carousel-img"
+              src={spiderMan}
               alt="Second slide"
             />
 
@@ -32,8 +35,8 @@ const Home = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Third slide&bg=20232a"
+              className="carousel-img"
+              src={shangChi}
               alt="Third slide"
             />
 
