@@ -3,7 +3,8 @@ import { Navbar, Nav, NavDropdown,Form,FormControl, Button, Container } from "re
 const NavbarMain=()=>{
 
     return (
-        <Navbar bg="light" expand="lg">
+      <div>
+         <Navbar bg="dark" variant={"light"} expand="lg">
           <Container>
             <Navbar.Brand href="#home">Fantastic 4</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -37,6 +38,7 @@ const NavbarMain=()=>{
             </Navbar.Collapse>
           </Container>
         </Navbar>
+      </div>
     );
 }
 export default NavbarMain
