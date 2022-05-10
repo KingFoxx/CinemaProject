@@ -1,12 +1,14 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavbarMain from "./components/NavbarMain";
-
+import Home from "./home/home";
 const App = () => {
   return (
-    <div className="App">
-        <NavbarMain />;
-    </div>
+    
+      <header className="App">
+      <NavbarMain />
+      <Home/>
+      </header>
   )
 };
 
