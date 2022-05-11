@@ -111,3 +111,20 @@ app.get("/discussion/read", function(req, res) {
 app.get("/discussion/remove", function(req, res) {
     db.query(`delete from discussion where id = ${req.body.dis_id}`, function(err, results) {});
 });
+
+// NOTE: We are only going to implement "create" and "read" functionality for payment
+// as we make a couple assumptions 
+// 1. There are no refunds given so no table entry is deleted from payment
+// 2. Payment details cannot be changed after payment is done so no update necessary
+
+// Card number is a string since it's a long number that might cause problems with certain data types
+// Card expiry is 4 digits with format 'YYMM'
+// To add an entry to the payment table
+app.post("/payment/create",function(req, res) {
+    let sqlQuery = `insert into payment(customer_id, booking_id, amount, card, expiry, security) 
+    values('${req.body.cus_id}', '${req.body.booking_id}', ${req.body.amount}, 
+    '${req.body.card}', ${req.body.expiry}, ${req.body.security})`;
+
+    db.query(sqlQuery, function(err, results) {});
+});
+
