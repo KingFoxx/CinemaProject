@@ -5,6 +5,10 @@ import Home from "./home/home";
 import Footer from "./footer-components/footer";
 import {BrowserRouter as Router, Routes, Route,Link} from "react-router-dom";
 import OpeningTimes from "./footer-components/opening-times";
+import GettingThere from "./components/gettingthere";
+import WhatsNear from "./components/whatsnear";
+import Classification from "./components/Classification";
+
 
 const App = () => {
   return (
@@ -14,6 +18,9 @@ const App = () => {
       <NavbarMain />
         <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/gettingthere" element={<GettingThere/>}/>
+        <Route path="/whatsnear" element={<WhatsNear/>}/>
+        <Route path="/Classification" element={<Classification/>}/>
         <Route path="/opening-times" element={<OpeningTimes/>}/>
         </Routes>
         <Footer/>
