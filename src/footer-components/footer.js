@@ -4,7 +4,6 @@ import OpeningTimes from "./opening-times";
 
 const Footer = () => {
   return (
-    <Router>
       <div className="footer">
         <div class="container">
           <div class="row">
@@ -32,14 +31,6 @@ const Footer = () => {
           <div class="container">© 2022 Copyright Text</div>
         </div>
       </div>
-      <div>
-        <Routes>
-          <Route path="/opening-times">
-            {<OpeningTimes/>}
-          </Route>
-        </Routes>
-      </div>
-    </Router>
   );
 };
 export default Footer;

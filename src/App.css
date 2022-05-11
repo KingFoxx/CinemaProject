@@ -5,6 +5,20 @@
   color:whitesmoke;
 }
 
+.OpeningTimes{
+  height: 80vh;
+  width:100%;
+  background-color: #616161;
+  color:whitesmoke;
+}
+
+.QaCinema{
+  width: auto;
+  height: 40vh;
+  max-height: 40vh;
+  margin: auto; 
+  display: block;
+}
 .header{
   text-align: center;
 }
@@ -27,6 +41,7 @@
 
   .bulletless-lists {
   list-style-type: none;
+  text-align: center;
   padding: 0; 
   margin: 0; 
 }
