@@ -5,6 +5,7 @@ import Home from "./home/home";
 import Footer from "./footer-components/footer";
 import {BrowserRouter as Router, Routes, Route,Link} from "react-router-dom";
 import OpeningTimes from "./footer-components/opening-times";
+import Contact from "./footer-components/contact"
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/opening-times" element={<OpeningTimes/>}/>
+        <Route path="/contact" element={<Contact/>}/>
         </Routes>
         <Footer/>
       </main>

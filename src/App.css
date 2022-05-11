@@ -31,6 +31,30 @@
   display: block;
   }
 
+  /* style the form*/
+ .form-container {
+  border-radius: 5px;
+  background-color: #212429;
+  padding: 20px;
+}
+.container-contact{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 100%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
   footer {
     background-color: #212429;
     font-family: "Rubik", sans-serif;

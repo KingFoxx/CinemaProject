@@ -18,8 +18,8 @@ const Footer = () => {
                 <li>
                   <Link to="/opening-times">Opening Times</Link>
                 </li>
-                <li as={Link} to={"/"}>
-                  Contact Us
+                <li>
+                <Link to="/contact">Contact Us</Link>
                 </li>
                 <li as={Link} to={"/"}>
                   About Us
