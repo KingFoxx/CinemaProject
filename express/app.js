@@ -128,3 +128,18 @@ app.post("/payment/create",function(req, res) {
     db.query(sqlQuery, function(err, results) {});
 });
 
+// To read all the data from payment table
+app.get("/payment/readAll", function(req, res) {
+    db.query(`select * from payment`, function(err, results) {
+        res.json(results);
+    });
+});
+
+// To read a single entry from the payment table (TODO: This needs to be amended per the front end implementation)
+app.get("/payment/read", function(req, res) {
+    db.query(`select * from payment where id = ${req.body.pay_id}`, function(err, results) {
+        res.json(results);
+    });
+});
+
+app.listen(4040);
