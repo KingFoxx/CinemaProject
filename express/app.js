@@ -47,7 +47,7 @@ app.get("/customer/readAll", function(req, res) {
     });
 });
 
-// To read a single entry from the custoemr table (TODO: This needs to be amended per the front end implementation)
+// To read a single entry from the customer table (TODO: This needs to be amended per the front end implementation)
 app.get("/customer/read", function(req, res) {
     db.query(`select * from customer where id = ${req.body.cus_id}`, function(err, results) {
         res.json(results);
@@ -88,7 +88,26 @@ app.post("/discussion/create",function(req, res) {
 // To update a posted discussion (TODO: may needs changing per the front end implementation)
 app.post("/discussion/update", function(req, res) {
     let sqlQuery = `update discussion set rating = '${req.body.rating}', 
-    description = '${req.body.description}' where id = ${req.body.id}`;
+    description = '${req.body.description}' where id = ${req.body.dis_id}`;
 
     db.query(sqlQuery, function(err, results) {});
+});
+
+// To read all the data from the discussion table (use to populate discussion page)
+app.get("/discussion/readAll", function(req, res) {
+    db.query(`select * from discussion`, function(err, results) {
+        res.json(results);
+    });
+});
+
+// To read a single entry from the discussion table (TODO: This needs to be amended per the front end implementation)
+app.get("/discussion/read", function(req, res) {
+    db.query(`select * from discussion where id = ${req.body.dis_id}`, function(err, results) {
+        res.json(results);
+    });
+});
+
+// To remove an entry from the discussion table (TODO: This needs to be amended per the front end implementation)
+app.get("/discussion/remove", function(req, res) {
+    db.query(`delete from discussion where id = ${req.body.dis_id}`, function(err, results) {});
 });
