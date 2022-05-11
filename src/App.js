@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavbarMain from "./components/NavbarMain";
+import Home from "./home/home";
+import Footer from "./footer-components/footer";
+import {BrowserRouter as Router, Routes, Route,Link} from "react-router-dom";
+import OpeningTimes from "./footer-components/opening-times";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+      <div className="App">
+      <header>
+        <NavbarMain />
       </header>
+      <main>
+        <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/opening-times" element={<OpeningTimes/>}/>
+        </Routes>
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
+    </Router>
+    
   );
-}
+};
 
 export default App;
