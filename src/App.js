@@ -10,18 +10,14 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-      <header>
-        <NavbarMain />
-      </header>
       <main>
+      <NavbarMain />
         <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/opening-times" element={<OpeningTimes/>}/>
         </Routes>
-      </main>
-      <footer>
         <Footer/>
-      </footer>
+      </main>
     </div>
     </Router>
     

@@ -4,6 +4,7 @@ import OpeningTimes from "./opening-times";
 
 const Footer = () => {
   return (
+    <footer> 
       <div className="footer">
         <div class="container">
           <div class="row">
@@ -31,6 +32,7 @@ const Footer = () => {
           <div class="container">© 2022 Copyright Text</div>
         </div>
       </div>
+    </footer>
   );
 };
 export default Footer;

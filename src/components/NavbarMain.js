@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Switch, Route,Link} from "react-router-dom";
 
 const NavbarMain=()=>{
     return (
-      <div>
+      <header>
+        <div>
          <Navbar bg="dark" variant={"dark"} expand="lg">
           <Container>
             <Navbar.Brand as={Link} to={"/"}>QA Cinemas</Navbar.Brand>
@@ -35,6 +36,7 @@ const NavbarMain=()=>{
           </Container>
         </Navbar>
       </div>
+      </header>
     );
 }
 export default NavbarMain
