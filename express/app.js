@@ -76,3 +76,19 @@ app.post("/booking/update",function(req, res) {
 
     db.query(sqlQuery, function(err, results) {});
 });
+
+// To add an entry to the discussion table
+app.post("/discussion/create",function(req, res) {
+    let sqlQuery = `insert into discussion(customer_id, movie_id, rating, description) 
+    values('${req.body.cus_id}', '${req.body.mov_id}', ${req.body.rating}, '${req.body.description}')`;
+
+    db.query(sqlQuery, function(err, results) {});
+});
+
+// To update a posted discussion (TODO: may needs changing per the front end implementation)
+app.post("/discussion/update", function(req, res) {
+    let sqlQuery = `update discussion set rating = '${req.body.rating}', 
+    description = '${req.body.description}' where id = ${req.body.id}`;
+
+    db.query(sqlQuery, function(err, results) {});
+});
