@@ -5,6 +5,10 @@
   color:whitesmoke;
 }
 
+.header{
+  text-align: center;
+}
+
 .carousel-img{
   width: auto;
   height: 70vh;
@@ -12,3 +16,17 @@
   margin: auto; 
   display: block;
   }
+
+  footer {
+    background-color: #212429;
+    font-family: "Rubik", sans-serif;
+    color: whitesmoke;
+    height: 20vh;
+    text-align: center;
+}
+
+  .bulletless-lists {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+}
