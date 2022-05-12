@@ -6,22 +6,22 @@ import "..//App.css";
 
 const Screens = () => {
     return (
-<div class="row">
-  <div class="column">
+<div className="row">
+  <div className="column">
     <img src={Screen1} alt="Snow" style="width:100%"/>
     <p>
         Adult :
         Child :
     </p>
   </div>
-  <div class="column">
+  <div className="column">
     <img src={Screen2} alt="Forest" style="width:100%"/>
     <p>
         Adult :
         Child :
     </p>
   </div>
-  <div class="column">
+  <div className="column">
     <img src={DirectorBox} alt="Mountains" style="width:100%"/>
     <p>
         Adult :
