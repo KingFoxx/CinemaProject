@@ -8,19 +8,19 @@ const GettingThere = () => {
     return(
     <div class="newbody App" >
     <h1> How To Find Us </h1>
-        <p>118 Lothian Road Edinburgh EH3 8BG</p>
+        <p>3rd Floor, International House, 1 St Katharine's Way,London E1W 1UN</p>
         <img 
               src={Exterior}
               alt="Exterior of Venue"
               class="newimg"
             />
-        <p>Nearest Parking: 30 Semple St, Edinburgh EH3 8BL </p>
+        <p>Nearest Parking: Minories Car Park, 1 Shorter St, London E1 8LP </p>
         <img
               src={Parking}
               alt="Nearest Parking"
               class="newimg"
             />
-        <p> Directions from Haymarket TrainStation: Turn right onto Clifton Terrace, straight onto Morrison Street, Cinema is located 600 meters away.  </p>
+        <p> Directions from TowerHill: Turn left onto Tower Hill Road as you exit the station, right onto A100, Cinema is located 600 meters away on your left hand side.  </p>
 
     </div>
     );
