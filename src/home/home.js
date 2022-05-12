@@ -38,6 +38,7 @@ const Home = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        <br/>
       </div>
   );
 };
