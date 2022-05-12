@@ -1,6 +1,5 @@
 import "../App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import OpeningTimes from "./opening-times";
 
 const Footer = () => {
   return (
@@ -21,8 +20,8 @@ const Footer = () => {
                 <li>
                 <Link to="/contact">Contact Us</Link>
                 </li>
-                <li as={Link} to={"/"}>
-                  About Us
+                <li>
+                <Link to="/about">About Us</Link>
                 </li>
               </ul>
             </div>
