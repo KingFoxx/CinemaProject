@@ -13,57 +13,57 @@ const ComingSoon = () => {
         <h1>Coming Soon to the Cinema</h1><br/>
         <Carousel>
           <Carousel.Item>
-              <a href="/batman">
+              <a href="/lotr1">
             <img
               className="carousel-img"
-              src={batman}
-              alt="Batman Movie"
+              src={lotr1}
+              alt="The Lord of the Rings: The Fellowship of the Ring"
               href
             />
             </a>
             <Carousel.Caption>
-              <h3>Batman Movie</h3>
+              <h3>The Lord of the Rings: The Fellowship of the Ring</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/spiderman">
+          <a href="/lotr2">
             <img
               className="carousel-img"
-              src={spiderMan}
-              alt="SpiderMan Movie"
+              src={lotr2}
+              alt="The Lord of the Rings: The Two Towers"
             />
             </a>
             <Carousel.Caption>
-              <h3>SpiderMan Movie</h3>
+              <h3>The Lord of the Rings: The Two Towers</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/shangchi">
+          <a href="/lotr3">
             <img
               className="carousel-img"
-              src={shangChi}
-              alt="ShangChi Movie"
+              src={lotr3}
+              alt="The Lord of the Rings: The Return of the King"
             />
             </a>
             <Carousel.Caption>
-              <h3>ShangChi Movie</h3>
+              <h3>The Lord of the Rings: The Return of the King</h3>
               <p>
                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
               </p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/doctorstrange">
+          <a href="/lotr4">
             <img
               className="carousel-img"
-              src={doctorstrange}
-              alt="DoctorStrange Movie"
+              src={lotr4}
+              alt="The Lord of the Rings: The Rings of Power"
             />
             </a>
             <Carousel.Caption>
-              <h3>DoctorStrange Movie</h3>
+              <h3>The Lord of the Rings: The Rings of Power</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
