@@ -93,6 +93,7 @@ input[type="text"], input[type="email"], select, textarea {
   content: "";
   clear: both;
   display: table;
+}
 
 .about-image {
   max-width: 100%;
@@ -105,7 +106,6 @@ input[type="text"], input[type="email"], select, textarea {
   width: 32px;
   height: 32px; 
   border-radius: 50%; 
-  mask: circle;
   font-size: 13px; 
   line-height: 7px;
   text-align: center;
