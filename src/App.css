@@ -1,5 +1,5 @@
 .App {
-  height: 100vh;
+  height: 100%;
   width:100%;
   background-color: #616161;
   color:whitesmoke;
@@ -31,6 +31,30 @@
   display: block;
   }
 
+  /* style the form*/
+ .form-container {
+  border-radius: 5px;
+  background-color: #212429;
+  padding: 20px;
+}
+.container-contact{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 100%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
   footer {
     background-color: #212429;
     font-family: "Rubik", sans-serif;
@@ -44,4 +68,28 @@
   text-align: center;
   padding: 0; 
   margin: 0; 
+}
+
+.about-image {
+  max-width: 100%;
+  height: 5%;
+  max-height: 30vh;
+  border-radius: 5px;
+}
+
+.social-icon{
+  width: 32px;
+  height: 32px; 
+  border-radius: 50%; 
+  mask: circle;
+  font-size: 13px; 
+  line-height: 7px;
+  text-align: center;
+  color: #fafafa;
+  background: #8f8f8f;
+  transition: all 0.35s ease-in-out;
+}
+
+.social-icon:hover {
+  background: #212429;
 }
