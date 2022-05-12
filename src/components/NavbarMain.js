@@ -16,11 +16,11 @@ const NavbarMain=()=>{
                   <NavDropdown.Item as={Link} to={"/"}>What's On?</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/"}>Coming Soon...</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link as={Link} to={"/"}>Classications</Nav.Link>
+                <Nav.Link as={Link} to={"/Classification"}>Classications</Nav.Link>
                 <Nav.Link as={Link} to={"/"}>Welcome to the BIG screen</Nav.Link>
                 <NavDropdown title="Locations" id="basic-nav-dropdown">
-                  <NavDropdown.Item as={Link} to={"/"}>Finding Us?</NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to={"/"}>What's Near Us?</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/gettingthere"}>Finding Us?</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/whatsnear"}>What's Near Us?</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
               <Form className="d-flex">

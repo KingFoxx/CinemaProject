@@ -70,6 +70,30 @@ input[type="text"], input[type="email"], select, textarea {
   margin: 0; 
 }
 
+.newbody {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font: 500 100%/1.5 system-ui;
+}
+.newimg {
+  height: 200px;
+  width: 200px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+
 .about-image {
   max-width: 100%;
   height: 5%;
@@ -92,4 +116,5 @@ input[type="text"], input[type="email"], select, textarea {
 
 .social-icon:hover {
   background: #212429;
+
 }
