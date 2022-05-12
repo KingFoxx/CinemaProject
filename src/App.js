@@ -10,6 +10,7 @@ import WhatsNear from "./components/whatsnear";
 import Classification from "./components/Classification";
 import Contact from "./footer-components/contact"
 import About from "./footer-components/about"
+import Discussion from "./components/Discussion";
 
 
 const App = () => {
@@ -19,13 +20,14 @@ const App = () => {
       <main>
         <NavbarMain />
           <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/gettingthere" element={<GettingThere/>}/>
-          <Route path="/whatsnear" element={<WhatsNear/>}/>
-          <Route path="/Classification" element={<Classification/>}/>
-          <Route path="/opening-times" element={<OpeningTimes/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/about" element={<About/>}/>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/gettingthere" element={<GettingThere/>}/>
+            <Route path="/whatsnear" element={<WhatsNear/>}/>
+            <Route path="/Classification" element={<Classification/>}/>
+            <Route path="/opening-times" element={<OpeningTimes/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/discussion" element={<Discussion/>}/>
           </Routes>
         <Footer/>
       </main>

@@ -22,6 +22,7 @@ const NavbarMain=()=>{
                   <NavDropdown.Item as={Link} to={"/gettingthere"}>Finding Us?</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/whatsnear"}>What's Near Us?</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link as={Link} to={"/Discussion"}>Discussion</Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <FormControl
