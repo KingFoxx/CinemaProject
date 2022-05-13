@@ -1,0 +1,47 @@
+[{ 
+    "id": "1",
+    "name": "Spider-Man ",
+    "genre": "Action",
+    "classification": "PG",
+    "image": "https://cdn.pocket-lint.com/r/s/970x/assets/images/159643-tv-news-spider-man-no-way-home-image1-dryautoefj-jpg.webp"
+},
+
+{ 
+    "id": "2", 
+    "name": "BatMan ", 
+    "genre": "Action",
+    "classification": "PG", 
+    "image": "https://cdn.pocket-lint.com/r/s/970x/assets/images/159643-tv-news-spider-man-no-way-home-image1-dryautoefj-jpg.webp"
+},
+
+{ 
+    "id": "3", 
+    "name": "BatMan ", 
+    "genre": "Action", 
+    "classification": "PG", 
+    "image": "https://cdn.pocket-lint.com/r/s/970x/assets/images/159643-tv-news-spider-man-no-way-home-image1-dryautoefj-jpg.webp"
+},
+
+{ 
+    "id": "4", 
+    "name": "BatMan ", 
+    "genre": "Action", 
+    "classification": "PG", 
+    "image": "https://cdn.pocket-lint.com/r/s/970x/assets/images/159643-tv-news-spider-man-no-way-home-image1-dryautoefj-jpg.webp"
+},
+
+{ 
+    "id": "5", 
+    "name": "BatMan ", 
+    "genre": "Action", 
+    "classification": "PG", 
+    "image": "https://cdn.pocket-lint.com/r/s/970x/assets/images/159643-tv-news-spider-man-no-way-home-image1-dryautoefj-jpg.webp"
+},
+{ 
+    "id": "6", 
+    "name": "BatMan ", 
+    "genre": "Action", 
+    "classification": "PG", 
+    "image": "https://cdn.pocket-lint.com/r/s/970x/assets/images/159643-tv-news-spider-man-no-way-home-image1-dryautoefj-jpg.webp"
+}
+]
