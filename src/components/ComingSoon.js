@@ -10,7 +10,7 @@ const ComingSoon = () => {
   return (
       
       <div className="App">
-        <h1>Coming Soon to the Cinema</h1><br/>
+        <h1 className="header">Coming Soon to the Cinema</h1><br/>
         <Carousel>
           <Carousel.Item>
               <a href="/batman">

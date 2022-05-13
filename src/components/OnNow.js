@@ -9,7 +9,7 @@ import lotr4 from "../Images/lotr4.jpg";
 const ComingSoon = () => {
   return (
       <div className="App">
-        <h1>What's Currently on</h1><br/>
+        <h1 className="header">What's Currently on</h1><br/>
         <Carousel>
           <Carousel.Item>
               <a href="/lotr1">
