@@ -2,6 +2,7 @@
   height: 100%;
   width:100%;
   background-color: #616161;
+  overflow-x: hidden;
   color:whitesmoke;
 }
 
@@ -43,6 +44,9 @@
   max-width: 100%;
 }
 
+.card-text{
+  color: black;
+}
 /* Style inputs with type="text", select elements and textareas */
 input[type="text"], input[type="email"], select, textarea {
   width: 100%;
