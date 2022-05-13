@@ -11,8 +11,6 @@ import Classification from "./components/Classification";
 import Contact from "./footer-components/contact"
 import About from "./footer-components/about"
 import Films from "./Bookings/Films"
-import Contact from "./footer-components/contact";
-import About from "./footer-components/about";
 import Screens from "./components/Screens";
 import ComingSoon from "./components/ComingSoon";
 import OnNow from "./components/OnNow";
