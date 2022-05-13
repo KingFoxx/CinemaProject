@@ -11,6 +11,12 @@ import Classification from "./components/Classification";
 import Contact from "./footer-components/contact"
 import About from "./footer-components/about"
 import Films from "./Bookings/Films"
+import Contact from "./footer-components/contact";
+import About from "./footer-components/about";
+import Screens from "./components/Screens";
+import ComingSoon from "./components/ComingSoon";
+import OnNow from "./components/OnNow";
+
 
 
 const App = () => {
@@ -28,6 +34,9 @@ const App = () => {
         <Route path="/opening-times" element={<OpeningTimes/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/Screens" element={<Screens/>}/>
+        <Route path="/ComingSoon" element={<ComingSoon/>}/>
+        <Route path="/OnNow" element={<OnNow/>}/>
         </Routes>
         <Footer/>
       </main>
