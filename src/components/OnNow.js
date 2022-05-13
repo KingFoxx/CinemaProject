@@ -8,9 +8,8 @@ import lotr4 from "../Images/lotr4.jpg";
 
 const ComingSoon = () => {
   return (
-    <body>
       <div className="App">
-        <h1>Coming Soon to the Cinema</h1><br/>
+        <h1>What's Currently on</h1><br/>
         <Carousel>
           <Carousel.Item>
               <a href="/lotr1">
@@ -22,8 +21,8 @@ const ComingSoon = () => {
             />
             </a>
             <Carousel.Caption>
-              <h3>The Lord of the Rings: The Fellowship of the Ring</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className="text-gallery">The Lord of the Rings: The Fellowship of the Ring</h3>
+              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -35,8 +34,8 @@ const ComingSoon = () => {
             />
             </a>
             <Carousel.Caption>
-              <h3>The Lord of the Rings: The Two Towers</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3 className="text-gallery">The Lord of the Rings: The Two Towers</h3>
+              <p className="text-gallery">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -48,8 +47,8 @@ const ComingSoon = () => {
             />
             </a>
             <Carousel.Caption>
-              <h3>The Lord of the Rings: The Return of the King</h3>
-              <p>
+              <h3 className="text-gallery">The Lord of the Rings: The Return of the King</h3>
+              <p className="text-gallery">
                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
               </p>
             </Carousel.Caption>
@@ -63,13 +62,14 @@ const ComingSoon = () => {
             />
             </a>
             <Carousel.Caption>
-              <h3>The Lord of the Rings: The Rings of Power</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className="text-gallery">The Lord of the Rings: The Rings of Power</h3>
+              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        <br/>
       </div>
-    </body>
+      
   );
 };
 export default ComingSoon;

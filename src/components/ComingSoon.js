@@ -8,7 +8,7 @@ import doctorstrange from "../Images/Doctor-Strange.jpg";
 
 const ComingSoon = () => {
   return (
-    <body>
+      
       <div className="App">
         <h1>Coming Soon to the Cinema</h1><br/>
         <Carousel>
@@ -22,8 +22,8 @@ const ComingSoon = () => {
             />
             </a>
             <Carousel.Caption>
-              <h3>Batman Movie</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className="text-gallery">Batman Movie</h3>
+              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -35,8 +35,8 @@ const ComingSoon = () => {
             />
             </a>
             <Carousel.Caption>
-              <h3>SpiderMan Movie</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3 className="text-gallery">SpiderMan Movie</h3>
+              <p className="text-gallery">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -48,8 +48,8 @@ const ComingSoon = () => {
             />
             </a>
             <Carousel.Caption>
-              <h3>ShangChi Movie</h3>
-              <p>
+              <h3 className="text-gallery">ShangChi Movie</h3>
+              <p className="text-gallery">
                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
               </p>
             </Carousel.Caption>
@@ -63,13 +63,13 @@ const ComingSoon = () => {
             />
             </a>
             <Carousel.Caption>
-              <h3>DoctorStrange Movie</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className="text-gallery">DoctorStrange Movie</h3>
+              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        <br/>
       </div>
-    </body>
   );
 };
 export default ComingSoon;

@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="col l4 offset-l4 s12">
               <ul className="bulletless-lists">
                 <li>
-                  <Link to="/opening-times">Opening Times</Link>
+                  <Link to="/opening-times" className="footerLink">Opening Times</Link>
                 </li>
                 <li>
                 <Link to="/contact">Contact Us</Link>
