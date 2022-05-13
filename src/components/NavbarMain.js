@@ -16,6 +16,7 @@ const NavbarMain=()=>{
                   <NavDropdown.Item as={Link} to={"/"}>What's On?</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/"}>Coming Soon...</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link as={Link} to={"/Films"}>Book a film</Nav.Link>
                 <Nav.Link as={Link} to={"/Classification"}>Classications</Nav.Link>
                 <Nav.Link as={Link} to={"/"}>Welcome to the BIG screen</Nav.Link>
                 <NavDropdown title="Locations" id="basic-nav-dropdown">
