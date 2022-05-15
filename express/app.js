@@ -79,12 +79,41 @@ app.post("/booking/update",function(req, res) {
 
 // To add an entry to the discussion table
 app.post("/discussion/create",function(req, res) {
-    let sqlQuery = `insert into discussion(customer_id, movie_id, title, rating, description) 
-    values(${req.body.cus_id}, ${req.body.mov_id}, "${req.body.title}", ${req.body.rating}, "${req.body.description})`;
 
-    db.query(sqlQuery, function(err, results) {
-        res.json(results);
-    });
+    // // Just wanted to see what was coming back in the body during testing
+    // console.log(req.body);
+
+    let cus_id, mov_id;
+
+    let movie = req.body.movie;
+    let name = req.body.cus_name;
+    let body = req.body;
+
+    // This logic can be changed if we intend to implement more movies
+    // i.e. this data can also be obtained from the database as another nested query
+    if (movie === "Movie 1") {
+        mov_id = 1;
+    } else if (movie === "Movie 2") {
+        mov_id = 2;
+    } else if (movie === "Movie 3") {
+        mov_id = 3;
+    } else {
+        mov_id = 4;
+    }
+
+    // Using query inside a query to retrieve information first and then use it in the nested query
+    db.query(`select * from customer where name = "${name}"`, function(req, results) {
+        // The is how we access the first element (or the only element) returned as results
+        cus_id = results[0].id;
+
+        let sqlQuery = `insert into discussion(customer_id, movie_id, title, rating, description) 
+        values(${cus_id}, ${mov_id}, "${body.title}", ${body.rating}, "${body.description}")`;
+
+        db.query(sqlQuery, function(err, results) {     
+        
+            res.json(results);
+        });
+    });    
 });
 
 // To update a posted discussion (TODO: may needs changing per the front end implementation)

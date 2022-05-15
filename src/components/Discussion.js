@@ -17,14 +17,19 @@ const Discussion=()=> {
       console.log("Submit button was pressed");
       console.log(formData);
 
-      let refPromise = axios.post("http://localhost:4040/discussion/create", {
-        cus_id : formData.cus_id,
-        mov_id : formData.mov_id,
-        title : formData.title,
-        rating : formData.rating,
-        description : formData.description
-      });
-      refPromise.then((res) => console.log(res));
+      if (formData.cus_name == null || formData.movie == null || formData.title == null ||
+          formData.description == null) {
+        alert("Please complete the relevant fields");
+      } else {
+        let refPromise = axios.post("http://localhost:4040/discussion/create", {
+          cus_name : formData.cus_name,
+          movie : formData.movie,
+          title : formData.title,
+          rating : formData.rating,
+          description : formData.description
+        });
+        refPromise.then((res) => console.log(res));
+      }
   }
 
   const handleChange = event => {
@@ -40,22 +45,34 @@ const Discussion=()=> {
       <form onSubmit={handleSubmit}>
         <div class="container form-group">
           <div class="row form-control-sm">
-            <input class="col" type="number" name="cus_id" onChange={handleChange} placeholder="Your name" maxLength={40}/>
+            <input onChange={handleChange} class="col" type="text" name="cus_name" placeholder="Your name" maxLength={40}/>
             <div class="col"/>
-            <input class="col" type="number" name="mov_id" onChange={handleChange} placeholder="Movie name" maxLength={40}/>
+            <div class="col container">
+              <div class="row align-items-center">
+                <span class="col"></span>
+                <select onChange={handleChange} class="col" name="movie">
+                  <option selected="selected">-- Movie --</option>
+                  <option value="Movie 1">Movie 1</option>
+                  <option value="Movie 2">Movie 2</option>
+                  <option value="Movie 3">Movie 3</option>
+                  <option value="Movie 4">Movie 4</option>
+                </select>
+              </div>
+            </div>
           </div>
           <div class="row form-control-sm">
             <input class="col" type="text" name="title" onChange={handleChange} placeholder="Post title" maxLength={40}/>
             <div class="col"/>
             <div class="col container">
               <div class="row align-items-center">
-                <span class="col h6">Select A Rating</span>
+                <span class="col"></span>
                 <select  class="col" name="rating" onChange={handleChange}>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option selected="selected">-- Rating --</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
               </div>
             </div>
