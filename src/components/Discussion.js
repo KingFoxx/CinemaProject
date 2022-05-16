@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useReducer, useState, useEffect, useRef } from 'react';
+import useCollapse from 'react-collapsed';
 import axios from 'axios';
 
 const formReducer = (state, event) => {
@@ -13,6 +14,9 @@ const Discussion=()=> {
   const [submission, setSubmission] = useState({});
   const dis_obj = useRef([]);
   let dis_array = [];
+
+  // Collapsible setup
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
 
   const handleSubmit = event => {
@@ -51,12 +55,19 @@ const Discussion=()=> {
 
   return(
     <div>
+      
+      <h3 class="text-center" style={{marginTop: 12}}>Discussion Thread!</h3>
+      
       <hr/>
-      <h3 class="text-center">Discussion Thread!</h3>
 
-      <hr/>
-
-      <form onSubmit={handleSubmit}>
+      <div className="collapsible">
+        <div className="header" {...getToggleProps()}>
+            <button type="button" style={{fontSize: 16, textAlign: 'right', margin: 16, paddingLeft: 20, paddingRight: 20, paddingTop: 5, paddingBottom: 5}}>
+              {isExpanded ? 'Cancel' : 'Add A New Post'}</button>
+        </div>
+        <div {...getCollapseProps()}>
+          <div className="content">
+          <form onSubmit={handleSubmit}>
         <div class="container form-group">
           <div class="row form-control-sm">
             <input onChange={handleChange} class="col" type="text" name="cus_name" placeholder="Your name" maxLength={40}/>
@@ -97,13 +108,25 @@ const Discussion=()=> {
             
         </div>
         <div class="text-center">
-            <button class="mt-3" type="submit">Submit</button>
+            <button class="mt-3" type="submit" style={{fontSize: 16, textAlign: 'right', margin: 16, paddingLeft: 20, paddingRight: 20, paddingTop: 5, paddingBottom: 5}}>Submit</button>
         </div>
           
       </form>
+        </div>
+        </div>
+    </div>
 
+
+      <div>
+
+
+      </div>
       <hr/>
 
+      <h3 class="text-center">Discusson Posts</h3>
+
+      <hr/>
+      
       {/* This is the block that displays the discussion topics */}
       {
       <div className="wrapper" class="container">
