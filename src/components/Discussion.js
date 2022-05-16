@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 const formReducer = (state, event) => {
@@ -11,11 +11,14 @@ const Discussion=()=> {
 
   const [formData, setFormData] = useReducer(formReducer, {});
   const [submission, setSubmission] = useState({});
+  const dis_obj = useRef([]);
+  let dis_array = [];
+
 
   const handleSubmit = event => {
       event.preventDefault();
       console.log("Submit button was pressed");
-      console.log(formData);
+      // console.log(formData);
 
       if (formData.cus_name == null || formData.movie == null || formData.title == null ||
           formData.description == null) {
@@ -28,9 +31,16 @@ const Discussion=()=> {
           rating : formData.rating,
           description : formData.description
         });
-        refPromise.then((res) => console.log(res));
+        // The response comes back as an object which can be useful
+        refPromise.then((res) => res);
       }
   }
+
+  useEffect(() => {
+    let refPromise = axios.get("http://localhost:4040/discussion/readAll", {});
+    refPromise.then((res) => dis_obj.current = res.data);
+    // console.log(dis_obj.current);
+  });
 
   const handleChange = event => {
     setFormData({
@@ -41,7 +51,11 @@ const Discussion=()=> {
 
   return(
     <div>
-      <h3>Discussion Thread!</h3>
+      <hr/>
+      <h3 class="text-center">Discussion Thread!</h3>
+
+      <hr/>
+
       <form onSubmit={handleSubmit}>
         <div class="container form-group">
           <div class="row form-control-sm">
@@ -87,7 +101,29 @@ const Discussion=()=> {
         </div>
           
       </form>
+
       <hr/>
+
+      {/* This is the block that displays the discussion topics */}
+      {
+      <div className="wrapper">
+        {dis_obj.current.map((obj) => 
+          <ul>
+            <li>
+              <span>Customer ID: {obj.customer_id}</span>
+              <span>Movie ID: {obj.movie_id}</span>
+            </li>
+            <li>
+              <span>Title: {obj.title}</span>
+              <span>Rating: {obj.rating}</span>
+            </li>
+            <li>
+              <span>Comment: {obj.description}</span>
+            </li>
+          </ul>
+        )}
+      </div>
+      }
     </div>
   );
 }
