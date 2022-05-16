@@ -4,14 +4,14 @@ import { Grid } from '@material-ui/core/';
 import films from "./film.json"
 import Film from './Film';
 
-const Films = () => {
+const Films = (props) => {
     return(
         <div className="App">
             <hr/>
             <Grid container justify="center" spacing={2}>
-            {films.map((film) => (
+            {films.map((film,i) => (
                     <Grid key={film.id} item xs={12} lg={4}>
-                        <Film film={film} />    
+                        <Film film={film} i={i} />    
                     </Grid>
                 ))}
             </Grid>

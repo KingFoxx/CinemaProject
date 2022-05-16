@@ -13,6 +13,11 @@
   color:whitesmoke;
 }
 
+.detailsCard{
+  background-color: #212429;
+  color:white;
+  margin-top: 5%;
+}
 .QaCinema{
   width: auto;
   height: 40vh;

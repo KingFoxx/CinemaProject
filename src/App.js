@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavbarMain from "./components/NavbarMain";
 import Home from "./components/home";
 import Footer from "./footer-components/footer";
-import {BrowserRouter as Router, Routes, Route,Link} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import OpeningTimes from "./footer-components/opening-times";
 import GettingThere from "./components/gettingthere";
 import WhatsNear from "./components/whatsnear";
@@ -14,7 +14,7 @@ import Films from "./Bookings/Films"
 import Screens from "./components/Screens";
 import ComingSoon from "./components/ComingSoon";
 import OnNow from "./components/OnNow";
-
+import FilmDetail from "./Bookings/FilmDetail";
 
 
 const App = () => {
@@ -35,6 +35,7 @@ const App = () => {
         <Route path="/Screens" element={<Screens/>}/>
         <Route path="/ComingSoon" element={<ComingSoon/>}/>
         <Route path="/OnNow" element={<OnNow/>}/>
+        <Route path="/FilmDetail/:id" element={<FilmDetail/>}/>
         </Routes>
         <Footer/>
       </main>
