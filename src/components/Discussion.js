@@ -106,20 +106,23 @@ const Discussion=()=> {
 
       {/* This is the block that displays the discussion topics */}
       {
-      <div className="wrapper">
+      <div className="wrapper" class="container">
+        <div>
+
+        </div>
         {dis_obj.current.map((obj) => 
           <ul>
-            <li>
-              <span>Customer ID: {obj.customer_id}</span>
-              <span>Movie ID: {obj.movie_id}</span>
+            <li class="row">
+              <span class="col">Customer ID: {obj.customer_id}</span>
+              <span class="col">Movie ID: {obj.movie_id}</span>
+
             </li>
-            <li>
-              <span>Title: {obj.title}</span>
-              <span>Rating: {obj.rating}</span>
+            <li class="row">
+              <span class="col">Title: {obj.title}</span>
+              <span class="col">Rating: {obj.rating} / 5</span>
             </li>
-            <li>
-              <span>Comment: {obj.description}</span>
-            </li>
+            <p style={{height: 160, padding: 5, marginTop: 5, backgroundColor: "grey"}} class="col">Comment: <br/>{obj.description}</p>
+            <hr/>
           </ul>
         )}
       </div>
