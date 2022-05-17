@@ -1,6 +1,6 @@
 
 import "..//App.css";
-import bread from "../Images/Bread.jpg";
+import bread from "..//Images/Bread.jpg";
 import bentoya from "../Images/Bentoya.jpg";
 import byron from "../Images/Byron.jpg";
 import raging from "../Images/Raging-Bull.jpg";
