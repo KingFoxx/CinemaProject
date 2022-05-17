@@ -11,9 +11,8 @@ const formReducer = (state, event) => {
 const Discussion=()=> {
 
   const [formData, setFormData] = useReducer(formReducer, {});
-  const [submission, setSubmission] = useState({});
   const dis_obj = useRef([]);
-  let dis_array = [];
+  const [useDis, setUseDis] = useState([]);
 
   // Collapsible setup
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
@@ -36,13 +35,20 @@ const Discussion=()=> {
           description : formData.description
         });
         // The response comes back as an object which can be useful
-        refPromise.then((res) => res);
+        refPromise.then((res) => {
+          console.log(res);
+        });
       }
   }
 
+  // Used so the page is refreshed with the new data when the data is retrieved from the database
   useEffect(() => {
     let refPromise = axios.get("http://localhost:4040/discussion/readAll", {});
-    refPromise.then((res) => dis_obj.current = res.data);
+    refPromise.then((res) => {
+      dis_obj.current = res.data
+      // This line is only used so the data on the page re-renders
+      setUseDis(res.data);
+    });
     // console.log(dis_obj.current);
   });
 
@@ -55,9 +61,9 @@ const Discussion=()=> {
 
   return(
     <div>
-      
+
       <h3 class="text-center" style={{marginTop: 12}}>Discussion Thread!</h3>
-      
+
       <hr/>
 
       <div className="collapsible">
@@ -112,8 +118,10 @@ const Discussion=()=> {
         </div>
           
       </form>
+      
         </div>
         </div>
+      
     </div>
 
 
