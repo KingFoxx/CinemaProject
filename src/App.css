@@ -122,10 +122,6 @@ input[type="text"], input[type="email"], select, textarea {
   background: #212429;
 
 }
-.text-gallery{
-background-color: rgb(0, 0, 0);
-justify-content:center;
-}
 .footerLink {
   color:rgb(69, 76, 82);
   text-decoration: none;
@@ -198,20 +194,7 @@ body {
   transform: translateY(-100%);
   transition: .2s ease-in-out;
 }
-
-.card__arc {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  bottom: 100%;
-  right: 0;      
-  z-index: 1;
-}
-
-.card__arc path {
-  fill: var(--surface-color);
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-}       
+    
 
 .card:hover .card__header {
   transform: translateY(0);
@@ -221,14 +204,6 @@ body {
   font-size: 1em;
   margin: 0 0 .3em;
   color: #6A515E;
-}
-
-.card__tagline {
-  display: block;
-  margin: 1em 0;
-  font-family: "MockFlowFont";  
-  font-size: .8em; 
-  color: #D7BDCA;  
 }
 
 .card__description {
@@ -241,3 +216,20 @@ body {
   -webkit-line-clamp: 3;
   overflow: hidden;
 }    
+
+.itemTextCarousel {
+  text-align:center;
+  
+}
+.text-gallery{
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 20em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #2e2f35;
+  padding: 5px;
+  margin-bottom: 1em;
+  
+  }
