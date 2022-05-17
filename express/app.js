@@ -126,7 +126,12 @@ app.post("/discussion/update", function(req, res) {
 
 // To read all the data from the discussion table (use to populate discussion page)
 app.get("/discussion/readAll", function(req, res) {
-    db.query(`select * from discussion`, function(err, results) {
+
+    let sqlQuery = `select customer.name as cus_name, movie.name as mov_name, 
+    dis.title, dis.rating, dis.description from discussion as dis
+    join customer on customer.id = dis.customer_id
+    join movie on movie.id = dis.movie_id;`
+    db.query(sqlQuery, function(err, results) {
         res.json(results);
     });
 });

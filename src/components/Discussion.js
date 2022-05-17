@@ -136,8 +136,8 @@ const Discussion=()=> {
         {dis_obj.current.map((obj) => 
           <ul>
             <li class="row">
-              <span class="col">Customer ID: {obj.customer_id}</span>
-              <span class="col">Movie ID: {obj.movie_id}</span>
+              <span class="col">User: {obj.cus_name}</span>
+              <span class="col">Movie: {obj.mov_name}</span>
 
             </li>
             <li class="row">
