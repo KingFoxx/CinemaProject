@@ -27,32 +27,22 @@ const App = () => {
     <Router>
       <div className="App">
       <main>
-        <NavbarMain />
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/gettingthere" element={<GettingThere/>}/>
-            <Route path="/whatsnear" element={<WhatsNear/>}/>
-            <Route path="/Classification" element={<Classification/>}/>
-            <Route path="/opening-times" element={<OpeningTimes/>}/>
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path="/about" element={<About/>}/>
-            <Route path="/discussion" element={<Discussion/>}/>
-          </Routes>
       <NavbarMain />
         <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/Films" element={<Films/>}/>
-        <Route path="/gettingthere" element={<GettingThere/>}/>
-        <Route path="/whatsnear" element={<WhatsNear/>}/>
-        <Route path="/Classification" element={<Classification/>}/>
-        <Route path="/opening-times" element={<OpeningTimes/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/Screens" element={<Screens/>}/>
-        <Route path="/ComingSoon" element={<ComingSoon/>}/>
-        <Route path="/OnNow" element={<OnNow/>}/>
-        <Route path="/FilmDetail/:id" element={<FilmDetail/>}/>
-        <Route path="/Cart" element={<Cart/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Films" element={<Films/>}/>
+          <Route path="/gettingthere" element={<GettingThere/>}/>
+          <Route path="/whatsnear" element={<WhatsNear/>}/>
+          <Route path="/Classification" element={<Classification/>}/>
+          <Route path="/opening-times" element={<OpeningTimes/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/discussion" element={<Discussion/>}/>
+          <Route path="/Screens" element={<Screens/>}/>
+          <Route path="/ComingSoon" element={<ComingSoon/>}/>
+          <Route path="/OnNow" element={<OnNow/>}/>
+          <Route path="/FilmDetail/:id" element={<FilmDetail/>}/>
+          <Route path="/Cart" element={<Cart/>}/>
         </Routes>
         <Footer/>
       </main>

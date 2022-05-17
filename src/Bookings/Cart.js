@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
-import CartContext from './cart-context'
+import CartContext from './cart-context';
+import films from './film.json';
 
 
 function withQuantities(films){
@@ -18,8 +19,13 @@ function withQuantities(films){
 }
 
 export default function CartPage() {
+    
+//   const film = films[id];
+
   const {cart} = useContext(CartContext);
-  console.log(cart)
+  console.log("this is cart");
+  let length = cart.length - 1;
+  console.log(cart[length][0].id);
     return (
       <div className='OpeningTimes'>
       <Container>
@@ -36,13 +42,13 @@ export default function CartPage() {
           </thead>
           <tbody>
             {
-                withQuantities(cart).map((film) =>(
-                    <tr key={film.id}>
-                    <td>{film.name}</td>
-                    <td>{film.price}</td>
-                    <td>{film.qty}</td>
-                    <td>{film.qty * film.price}</td>
-                    <td>{(film.qty*film.price)*1.2}</td>
+                withQuantities(cart[length]).map((data) =>(
+                    <tr key={data.id}>
+                    <td>{data.id}</td>
+                    <td>{data.cost}</td>
+                    <td>{data.num_seats}</td>
+                    <td>{data.cost}</td>
+                    <td>{(data.cost)*1.2}</td>
                 </tr>
                 ))}
           </tbody>
