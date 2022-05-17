@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useContext} from "react";
 import { Link, useParams } from "react-router-dom";
+import CartContext from './cart-context';
 import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -10,6 +11,7 @@ import films from "./film.json";
 const FilmDetail = () => {
   const { id } = useParams();
   const film = films[id];
+  const { addToCart } = useContext(CartContext)
   return (
     <div className="OpeningTimes">
       <Container className="detailsCard">
@@ -36,11 +38,11 @@ const FilmDetail = () => {
                     </p>
                     <select
                       className="form-control rounded-4 w-50"
-                      name="product_size"
-                      id="id_product_size"
+                      name="film_qyantity"
+                      id="id_film_quantity"
                       style={{ marginLeft: "5px" }}
                     >
-                      <option value="#" selected>
+                      <option value="#" defaultValue>
                         Select Quantity
                       </option>
                       <option value="1">1</option>
@@ -58,9 +60,7 @@ const FilmDetail = () => {
                       <Button variant="light" style={{ margin: "5px" }} as={Link} to={"/Films"}>
                         Go Back
                       </Button>
-                      <Button variant="light" style={{ margin: "5px" }} >
-                        Checkout
-                      </Button>
+                      <Button variant="light" style={{ margin: "5px" }} as={Link} to={"/Cart"} onClick={() => addToCart(film)}>Checkout</Button>
                     </Col>
                   </Col>
                 </Row>
