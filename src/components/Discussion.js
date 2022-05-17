@@ -144,13 +144,13 @@ const Discussion=()=> {
         {dis_obj.current.map((obj) => 
           <ul>
             <li class="row">
-              <span class="col">User: {obj.cus_name}</span>
-              <span class="col">Movie: {obj.mov_name}</span>
+              <span class="col">User: <strong>{obj.cus_name}</strong></span>
+              <span class="col">Movie: <strong>{obj.mov_name}</strong></span>
 
             </li>
             <li class="row">
-              <span class="col">Title: {obj.title}</span>
-              <span class="col">Rating: {obj.rating} / 5</span>
+              <span class="col">Title: <strong>{obj.title}</strong></span>
+              <span class="col">Rating: <strong>{obj.rating} / 5</strong></span>
             </li>
             <p style={{height: 160, padding: 5, marginTop: 5, backgroundColor: "grey"}} class="col">Comment: <br/>{obj.description}</p>
             <hr/>
