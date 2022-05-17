@@ -1,5 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import useCart from './hooks/use-cart';
+import CartContext from './Bookings/cart-context';
 import NavbarMain from "./components/NavbarMain";
 import Home from "./components/home";
 import Footer from "./footer-components/footer";
@@ -15,10 +17,12 @@ import Screens from "./components/Screens";
 import ComingSoon from "./components/ComingSoon";
 import OnNow from "./components/OnNow";
 import FilmDetail from "./Bookings/FilmDetail";
+import Cart from "./Bookings/Cart";
 
 
 const App = () => {
   return (
+    <CartContext.Provider value={useCart([])}>
     <Router>
       <div className="App">
       <main>
@@ -36,12 +40,13 @@ const App = () => {
         <Route path="/ComingSoon" element={<ComingSoon/>}/>
         <Route path="/OnNow" element={<OnNow/>}/>
         <Route path="/FilmDetail/:id" element={<FilmDetail/>}/>
+        <Route path="/Cart" element={<Cart/>}/>
         </Routes>
         <Footer/>
       </main>
     </div>
     </Router>
-    
+  </CartContext.Provider>
   );
 };
 
