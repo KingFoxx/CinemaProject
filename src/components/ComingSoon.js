@@ -13,58 +13,49 @@ const ComingSoon = () => {
         <h1 className="header">Coming Soon to the Cinema</h1><br/>
         <Carousel>
           <Carousel.Item>
-              <a href="/batman">
             <img
               className="carousel-img"
               src={batman}
               alt="Batman Movie"
-              href
             />
-            </a>
             <Carousel.Caption>
               <h3 className="text-gallery">Batman Movie</h3>
-              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p className="text-gallery">The film sees Batman, who has been fighting crime in Gotham City for two years, uncover corruption while pursuing the Riddler (Dano), a serial killer who targets Gotham's elite.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/spiderman">
             <img
               className="carousel-img"
               src={spiderMan}
               alt="SpiderMan Movie"
             />
-            </a>
             <Carousel.Caption>
               <h3 className="text-gallery">SpiderMan Movie</h3>
-              <p className="text-gallery">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className="text-gallery">When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/shangchi">
             <img
               className="carousel-img"
               src={shangChi}
               alt="ShangChi Movie"
             />
-            </a>
             <Carousel.Caption>
               <h3 className="text-gallery">ShangChi Movie</h3>
               <p className="text-gallery">
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.
               </p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/doctorstrange">
             <img
               className="carousel-img"
               src={doctorstrange}
               alt="DoctorStrange Movie"
             />
-            </a>
             <Carousel.Caption>
               <h3 className="text-gallery">DoctorStrange Movie</h3>
-              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p className="text-gallery">After a horrible car accident, brilliant neurosurgeon Stephen Strange must find a way and a cure to healing his hands</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
