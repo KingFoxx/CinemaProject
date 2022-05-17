@@ -1,11 +1,16 @@
 import { Navbar, Nav, NavDropdown,Form,FormControl, Button, Container } from "react-bootstrap";
 import {BrowserRouter as Router, Switch, Route,Link} from "react-router-dom";
+import {useState} from 'react';
 
 const NavbarMain=()=>{
+    
+    const [loginState, setLoginState] = useState(false);
+
     return (
       <header>
         <div>
          <Navbar bg="dark" variant={"dark"} expand="lg">
+          <div>
           <Container>
             <Navbar.Brand as={Link} to={"/"}>QA Cinemas</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,6 +41,16 @@ const NavbarMain=()=>{
               </Form>
             </Navbar.Collapse>
           </Container>
+          </div>
+          <div>
+            <Container>
+              <div>Welcome Guest</div>
+              <NavDropdown title={loginState ? "Logout" : "Login"}>
+                <input style={{padding: 4, margin: 4}} height={2} type="text" placeholder="username"/>
+                <input style={{padding: 4, margin: 4}} type="password" placeholder="password"/>
+              </NavDropdown>
+            </Container>
+          </div>
         </Navbar>
       </div>
       </header>
