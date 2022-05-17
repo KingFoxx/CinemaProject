@@ -10,6 +10,7 @@ import WhatsNear from "./components/whatsnear";
 import Classification from "./components/Classification";
 import Contact from "./footer-components/contact"
 import About from "./footer-components/about"
+import Discussion from "./components/Discussion";
 import Films from "./Bookings/Films"
 import Screens from "./components/Screens";
 import ComingSoon from "./components/ComingSoon";
@@ -22,6 +23,17 @@ const App = () => {
     <Router>
       <div className="App">
       <main>
+        <NavbarMain />
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/gettingthere" element={<GettingThere/>}/>
+            <Route path="/whatsnear" element={<WhatsNear/>}/>
+            <Route path="/Classification" element={<Classification/>}/>
+            <Route path="/opening-times" element={<OpeningTimes/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/discussion" element={<Discussion/>}/>
+          </Routes>
       <NavbarMain />
         <Routes>
         <Route path="/" element={<Home/>}/>
