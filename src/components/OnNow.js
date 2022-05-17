@@ -12,40 +12,35 @@ const ComingSoon = () => {
         <h1 className="header">What's Currently on</h1><br/>
         <Carousel>
           <Carousel.Item>
-              <a href="/lotr1">
             <img
               className="carousel-img"
               src={lotr1}
               alt="The Lord of the Rings: The Fellowship of the Ring"
               href
             />
-            </a>
             <Carousel.Caption>
+              <div className="itemTextCarousel">
               <h3 className="text-gallery">The Lord of the Rings: The Fellowship of the Ring</h3>
-              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p></div>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/lotr2">
             <img
               className="carousel-img"
               src={lotr2}
               alt="The Lord of the Rings: The Two Towers"
             />
-            </a>
             <Carousel.Caption>
               <h3 className="text-gallery">The Lord of the Rings: The Two Towers</h3>
               <p className="text-gallery">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/lotr3">
             <img
               className="carousel-img"
               src={lotr3}
               alt="The Lord of the Rings: The Return of the King"
             />
-            </a>
             <Carousel.Caption>
               <h3 className="text-gallery">The Lord of the Rings: The Return of the King</h3>
               <p className="text-gallery">
@@ -54,13 +49,11 @@ const ComingSoon = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-          <a href="/lotr4">
             <img
               className="carousel-img"
               src={lotr4}
               alt="The Lord of the Rings: The Rings of Power"
             />
-            </a>
             <Carousel.Caption>
               <h3 className="text-gallery">The Lord of the Rings: The Rings of Power</h3>
               <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
