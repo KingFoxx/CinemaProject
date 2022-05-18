@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import CartContext from './cart-context';
-import films from './film.json';
+import {formatCurrency} from '../modules/string'
+import { Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 
-function withQuantities(films){
+export function withQuantities(films){
     return films.reduce((acc, film) =>{
         const existing = acc.find(f => film.id === f.id)
         return existing
@@ -35,7 +37,7 @@ export default function CartPage() {
               <tr>
                   <th>Film</th>
                   <th>Adult Price</th>
-                  <th>Concession Price</th>
+                  <th>Child Price</th>
                   <th>Number of Seats</th>
                   <th>Subtotal</th>
                   <th>Total inc Tax</th>
@@ -46,15 +48,16 @@ export default function CartPage() {
                 withQuantities(cart[length]).map((data) =>(
                     <tr key={data.id}>
                     <td>{data.mov_name}</td>
-                    <td>{data.adult_cost}</td>
-                    <td>{data.child_cost}</td>
+                    <td>{formatCurrency(data.adult_cost)}</td>
+                    <td>{formatCurrency(data.children == 0 ? "0" : data.child_cost)}</td>
                     <td>{data.num_seats}</td>
-                    <td>{data.cost}</td>
-                    <td>{((data.cost)*1.2).toFixed(2)}</td>
+                    <td>{formatCurrency(data.cost)}</td>
+                    <td>{formatCurrency(((data.cost)*1.2).toFixed(2))}</td>
                 </tr>
                 ))}
           </tbody>
       </table>
+      <Button variant="light" style={{ margin: "5px" }} as={Link} to={"/Checkout"}>Pay Now</Button>
       </Container>
       </div>
   );
