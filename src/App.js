@@ -22,6 +22,7 @@ import Cart from "./Bookings/Cart";
 import Checkout from "./Bookings/Checkout"
 
 
+
 const App = () => {
   return (
     <CartContext.Provider value={useCart([])}>
