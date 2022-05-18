@@ -57,18 +57,14 @@ const FilmDetail = () => {
     });
     refPromise.then(console.log("this is section 2"));
     refPromise.then((res) => {
-      // console.log(res.data);
+      console.log(res.data);
       addToCart(res.data);
       console.log("this is section 3");
       // Checkout button navigate to cart page from here instead of the button itself
       navigate('/Cart');
     });
   }
-
-  const printHello = () => {
-    console.log("hello");
-  }
-
+  
   return (
     <div className="OpeningTimes">
       <Container className="detailsCard">

@@ -69,7 +69,11 @@ app.post("/booking/create",function(req, res) {
 
     db.query(sqlQuery, function(err, results) {
         console.log(results.insertId);
-        db.query(`select * from booking where id = ${results.insertId}`, function(err, results) {
+        db.query(`select customer.name as cus_name, movie.name as mov_name, movie.price as adult_cost, movie.concession as child_cost, booking.adults, booking.children, booking.cost, booking.num_seats from booking
+        join customer on customer.id = booking.customer_id
+        join movie on movie.id = booking.movie_id
+        where booking.id = ${results.insertId}`, function(err, results) {
+            console.log(results);
             res.json(results);
         })
     });

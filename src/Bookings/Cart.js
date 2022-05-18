@@ -25,7 +25,7 @@ export default function CartPage() {
   const {cart} = useContext(CartContext);
   console.log("this is cart");
   let length = cart.length - 1;
-  console.log(cart[length][0].id);
+//   console.log(cart[length][0].id);
     return (
       <div className='OpeningTimes'>
       <Container>
@@ -34,21 +34,23 @@ export default function CartPage() {
           <thead>
               <tr>
                   <th>Film</th>
-                  <th>Ticket Price</th>
-                  <th>Quantity</th>
+                  <th>Adult Price</th>
+                  <th>Concession Price</th>
+                  <th>Number of Seats</th>
                   <th>Subtotal</th>
-                  <th>Total</th>
+                  <th>Total inc Tax</th>
               </tr>
           </thead>
           <tbody>
             {
                 withQuantities(cart[length]).map((data) =>(
                     <tr key={data.id}>
-                    <td>{data.id}</td>
-                    <td>{data.cost}</td>
+                    <td>{data.mov_name}</td>
+                    <td>{data.adult_cost}</td>
+                    <td>{data.child_cost}</td>
                     <td>{data.num_seats}</td>
                     <td>{data.cost}</td>
-                    <td>{(data.cost)*1.2}</td>
+                    <td>{((data.cost)*1.2).toFixed(2)}</td>
                 </tr>
                 ))}
           </tbody>
