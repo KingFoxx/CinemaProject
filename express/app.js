@@ -63,11 +63,20 @@ app.get("/customer/remove", function(req, res) {
 // Booking columns 'date' and 'time will be auto completed by the system, the 'paid' column
 // have a '0' entry by default which will be changed to '1' once a customer completes payment
 app.post("/booking/create",function(req, res) {
-    let sqlQuery = `insert into booking(customer_id, movie_id, adults, children, seating) 
-    values('${req.body.cus_id}', '${req.body.mov_id}', ${req.body.adults}, 
-    ${req.body.children}, ${req.body.seating})`;
+    let sqlQuery = `insert into booking(customer_id, movie_id, adults, children, cost, num_seats) 
+    values(${req.body.cus_id}, ${req.body.mov_id}, ${req.body.adults}, 
+    ${req.body.children}, "${req.body.cost}", ${req.body.num_seats})`;
 
-    db.query(sqlQuery, function(err, results) {});
+    db.query(sqlQuery, function(err, results) {
+        console.log(results.insertId);
+        db.query(`select customer.name as cus_name, movie.name as mov_name, movie.price as adult_cost, movie.concession as child_cost, booking.adults, booking.children, booking.cost, booking.num_seats from booking
+        join customer on customer.id = booking.customer_id
+        join movie on movie.id = booking.movie_id
+        where booking.id = ${results.insertId}`, function(err, results) {
+            console.log(results);
+            res.json(results);
+        })
+    });
 });
 
 // To update booking once payment has been made

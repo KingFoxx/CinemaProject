@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useReducer, useState, useEffect, useRef } from 'react';
+import { Button } from "react-bootstrap";
 import useCollapse from 'react-collapsed';
 import axios from 'axios';
 
@@ -60,7 +61,7 @@ const Discussion=()=> {
   }
 
   return(
-    <div>
+    <div className="App OpeningTimes">
 
       <h3 class="text-center" style={{marginTop: 12}}>Discussion Thread!</h3>
 
@@ -68,8 +69,8 @@ const Discussion=()=> {
 
       <div className="collapsible">
         <div className="header" {...getToggleProps()}>
-            <button type="button" style={{fontSize: 16, textAlign: 'right', margin: 16, paddingLeft: 20, paddingRight: 20, paddingTop: 5, paddingBottom: 5}}>
-              {isExpanded ? 'Cancel' : 'Add A New Post'}</button>
+            <Button type="button" style={{fontSize: 16, textAlign: 'right', margin: 16, paddingLeft: 20, paddingRight: 20, paddingTop: 5, paddingBottom: 5}}>
+              {isExpanded ? 'Cancel' : 'Add A New Post'}</Button>
         </div>
         <div {...getCollapseProps()}>
           <div className="content">
@@ -114,7 +115,7 @@ const Discussion=()=> {
             
         </div>
         <div class="text-center">
-            <button class="mt-3" type="submit" style={{fontSize: 16, textAlign: 'right', margin: 16, paddingLeft: 20, paddingRight: 20, paddingTop: 5, paddingBottom: 5}}>Submit</button>
+            <Button class="mt-3" type="submit" style={{fontSize: 16, textAlign: 'right', margin: 16, paddingLeft: 20, paddingRight: 20, paddingTop: 5, paddingBottom: 5}}>Submit</Button>
         </div>
           
       </form>
