@@ -19,6 +19,7 @@ import ComingSoon from "./components/ComingSoon";
 import OnNow from "./components/OnNow";
 import FilmDetail from "./Bookings/FilmDetail";
 import Cart from "./Bookings/Cart";
+import Checkout from "./Bookings/Checkout"
 
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/OnNow" element={<OnNow/>}/>
           <Route path="/FilmDetail/:id" element={<FilmDetail/>}/>
           <Route path="/Cart" element={<Cart/>}/>
+          <Route path="/Checkout" element={<Checkout/>}/>
         </Routes>
         <Footer/>
       </main>
