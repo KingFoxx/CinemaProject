@@ -12,6 +12,8 @@ const NavbarMain=()=>{
     const [formData, setFormData] = useReducer(formReducer, {});
     
     const [loginState, setLoginState] = useState(false);
+    const [invalidUserState, setInvalidUserState] = useState("");
+
     const loginRef = useRef(false);
     const customerRef = useRef({});
 
@@ -30,8 +32,11 @@ const NavbarMain=()=>{
             loginRef.current = true;
             customerRef.current = res.data[0];
             setLoginState(true);
+            setInvalidUserState("");
             console.log("customer ref dot current is:");
             console.log(customerRef.current);
+          } else {
+            setInvalidUserState("Invalid username or password!");
           }
 
           // console.log("Login state: " + loginState);
@@ -42,6 +47,7 @@ const NavbarMain=()=>{
         loginRef.current = false;
         customerRef.current = [];
         setLoginState(false);
+        setInvalidUserState("You've been logged out!");
 
         // console.log("@logout Login state: " + loginState);
         // console.log("@logout Login Ref: " + loginRef.current);
@@ -103,7 +109,7 @@ const NavbarMain=()=>{
             <Container>
             <div class="col">
                 <NavDropdown class="row" title={loginState ? "Logout" : "Login"}>
-                  <p name="info_text"></p>
+                  <p name="info_text" style={{color: "red", marginLeft: 4}}>{invalidUserState}</p>
                   <input onChange={handleChange} name="user_name" class="row" style={{padding: 4, margin: 8, width: "92%"}} height={2} type="text" placeholder="username"/>
                   <input onChange={handleChange} name="password" class="row" style={{padding: 4, margin: 8, width: "92%"}} type="password" placeholder="password"/>
                   <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: 10}}>
