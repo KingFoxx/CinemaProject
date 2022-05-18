@@ -38,6 +38,7 @@ const FilmDetail = () => {
     // TODO Price should be handled by database
     setData({ name: "price", value: film.price });
     setData({ name: "concession", value: film.concession });
+    setData({ name: "child_quantity", value: 0 });
     setData({ name: event.target.name, value: event.target.value });
   }
 
@@ -47,22 +48,28 @@ const FilmDetail = () => {
     book_cost = book_cost.toFixed(2);
     let numSeats = (parseInt(data.adult_quantity) + parseInt(data.child_quantity));
 
-    let refPromise = axios.post("http://localhost:4040/booking/create", {
-      cus_id : data.cus_id,
-      mov_id : data.mov_id,
-      adults : data.adult_quantity,
-      children : data.child_quantity,
-      cost : book_cost,
-      num_seats : numSeats
-    });
-    refPromise.then(console.log("this is section 2"));
-    refPromise.then((res) => {
-      console.log(res.data);
-      addToCart(res.data);
-      console.log("this is section 3");
-      // Checkout button navigate to cart page from here instead of the button itself
-      navigate('/Cart');
-    });
+    let childQantity = (data.child_quantity != null ? data.child_quantity : 0);
+
+    if (data.adult_quantity != null) {
+        let refPromise = axios.post("http://localhost:4040/booking/create", {
+        cus_id : data.cus_id,
+        mov_id : data.mov_id,
+        adults : data.adult_quantity,
+        children : childQantity,
+        cost : book_cost,
+        num_seats : numSeats
+      });
+      refPromise.then(console.log("this is section 2"));
+      refPromise.then((res) => {
+        console.log(res.data);
+        addToCart(res.data);
+        console.log("this is section 3");
+        // Checkout button navigate to cart page from here instead of the button itself
+        navigate('/Cart');
+      });
+    }else {
+      alert("Please select an adult quantity");
+    }
   }
   
   return (
@@ -118,6 +125,7 @@ const FilmDetail = () => {
                       <option value="#" defaultValue>
                         Child Quantity
                       </option>
+                      <option value="0">0</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
