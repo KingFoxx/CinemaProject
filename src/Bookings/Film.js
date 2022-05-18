@@ -20,11 +20,6 @@ const Film = ({ film, i }) => {
             bulk of the card's content.
           </Card.Text>
           <Button onClick={() => handleClick(i)} variant="primary">Find out more</Button>
-          <Card.Text>
-            <br/>
-            OR
-          </Card.Text>
-          <Button variant="primary">Book now</Button>
         </Card.Body>
       </Card>
     </div>
