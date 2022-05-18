@@ -19,9 +19,8 @@ const ComingSoon = () => {
               href
             />
             <Carousel.Caption>
-              <div className="itemTextCarousel">
-              <h3 className="text-gallery">The Lord of the Rings: The Fellowship of the Ring</h3>
-              <p className="text-gallery">Nulla vitae elit libero, a pharetra augue mollis interdum.</p></div>
+              <h3 className="text-gallery align-self-center">The Lord of the Rings: The Fellowship of the Ring</h3>
+              <p className="text-gallery align-self-center">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>

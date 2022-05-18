@@ -96,8 +96,8 @@ input[type="text"], input[type="email"], select, textarea {
   font: 500 100%/1.5 system-ui;
 }
 .newimg {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
 }
 .column {
   float: left;
@@ -156,7 +156,6 @@ input[type="text"], input[type="email"], select, textarea {
   background: #8f8f8f; 
   border-radius: 20px;
 }
-=======
 :root {
   --surface-color: #fff;
   --curve: 40;
@@ -230,13 +229,13 @@ body {
 .card__title {
   font-size: 1em;
   margin: 0 0 .3em;
-  color: #6A515E;
+  color: #000000;
 }
 
 .card__description {
   padding: 0 2em 2em;
   margin: 0;
-  color: #D7BDCA;
+  color: #030303;
   font-family: "MockFlowFont";   
   display: -webkit-box;
   -webkit-box-orient: vertical;
