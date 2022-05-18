@@ -48,8 +48,9 @@ app.get("/customer/readAll", function(req, res) {
 });
 
 // To read a single entry from the customer table (TODO: This needs to be amended per the front end implementation)
-app.get("/customer/read", function(req, res) {
-    db.query(`select * from customer where id = ${req.body.cus_id}`, function(err, results) {
+app.post("/customer/read", function(req, res) {
+    console.log(req.body);
+    db.query(`select * from customer where user_name = "${req.body.username}" && password = "${req.body.password}"`, function(err, results) {
         res.json(results);
     });
 });
