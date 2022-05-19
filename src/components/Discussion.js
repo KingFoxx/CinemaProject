@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useReducer, useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import useCollapse from 'react-collapsed';
 import axios from 'axios';
 
@@ -9,10 +10,13 @@ const formReducer = (state, event) => {
 }
 
 const Discussion=()=> {
+  const [loginRef, setLoginRef] = useRef(null);
 
   const [formData, setFormData] = useReducer(formReducer, {});
   const dis_obj = useRef([]);
   const [useDis, setUseDis] = useState([]);
+
+  const { state } = useLocation();
 
   // Collapsible setup
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
@@ -57,13 +61,19 @@ const Discussion=()=> {
       name: event.target.name,
       value: event.target.value
     });
+    console.log(JSON.parse(window.localStorage.getItem('loginState')));
+  }
+
+  const consoleLog = () => {
+    console.log("This is state object with login details");
+    console.log(state);
   }
 
   return(
     <div>
 
       <h3 class="text-center" style={{marginTop: 12}}>Discussion Thread!</h3>
-
+      <button onClick={consoleLog}>Log state props</button>
       <hr/>
 
       <div className="collapsible">

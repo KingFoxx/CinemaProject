@@ -1,6 +1,6 @@
 import { Navbar, Nav, NavDropdown,Form,FormControl, Button, Container } from "react-bootstrap";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import {useState, useReducer, useRef} from 'react';
+import {useState, useReducer, useRef, useEffect, createContext, useContext} from 'react';
 import axios from 'axios';
 
 const formReducer = (state, event) => {
@@ -8,19 +8,23 @@ const formReducer = (state, event) => {
 }
 
 const NavbarMain=()=>{
+    const [testState, setTestState] = useState(false);
+
+    // Attempt to log user on app load (this page must load on app load)
+    const loginRef = useRef(null);
 
     const [formData, setFormData] = useReducer(formReducer, {});
+    const { loginContext } = createContext([]);
     
-    const [loginState, setLoginState] = useState(false);
+    // const [loginState, setLoginState] = useState(false);
     const [invalidUserState, setInvalidUserState] = useState("");
 
-    const loginRef = useRef(false);
     const customerRef = useRef({});
 
     const initiateLogin = () => {
       console.log("login button pressed");
       console.log(formData.user_name + " : " + formData.password);
-      if(!loginState) {
+      if(loginRef.current == null) {
         let refPromise = axios.post("http://localhost:4040/customer/read", {
           username : formData.user_name,
           password : formData.password
@@ -29,9 +33,15 @@ const NavbarMain=()=>{
           console.log(res);
 
           if (res.data.length != 0) {
-            loginRef.current = true;
             customerRef.current = res.data[0];
-            setLoginState(true);
+            // loginContext = res.data[0];
+
+            // TODO testing
+            window.localStorage.setItem('loginRef', JSON.stringify(res.data[0]));
+            loginRef.current = res.data[0];
+            console.log("After login");
+            console.log(loginRef.current);
+
             setInvalidUserState("");
             console.log("customer ref dot current is:");
             console.log(customerRef.current);
@@ -44,9 +54,15 @@ const NavbarMain=()=>{
           // console.log("Customer Ref: " + customerRef.current);
         });
       } else {
-        loginRef.current = false;
         customerRef.current = [];
-        setLoginState(false);
+        // loginContext = [];
+
+        // TODO testing
+        window.localStorage.setItem('loginRef', null);
+        loginRef.current = null;
+        console.log("After logout");
+        console.log(loginRef);
+
         setInvalidUserState("You've been logged out!");
 
         // console.log("@logout Login state: " + loginState);
@@ -61,6 +77,13 @@ const NavbarMain=()=>{
         value: event.target.value
       });
     }
+
+    useEffect(() => {
+      loginRef.current = (JSON.parse(window.localStorage.getItem('loginRef')));
+      if (testState == false) {
+        setTestState(true);
+      }
+    })
 
     return (
       <header>
@@ -103,17 +126,17 @@ const NavbarMain=()=>{
         <Navbar bg="dark" variant={"dark"} expand="lg">
         <div class="container" style={{width: "100%"}}>
             <Container class="row">
-              <div class="col">Welcome {customerRef.current.length == 0 ? "Guest" : customerRef.current.name}</div>
+              <div class="col">Welcome {loginRef.current == null ? "Guest" : loginRef.current.name}</div>
             </Container>
             <Container class="col"></Container>
             <Container>
             <div class="col">
-                <NavDropdown class="row" title={loginState ? "Logout" : "Login"}>
+                <NavDropdown class="row" title={loginRef.current == null ? "Login" : "Logout"}>
                   <p name="info_text" style={{color: "red", marginLeft: 4}}>{invalidUserState}</p>
                   <input onChange={handleChange} name="user_name" class="row" style={{padding: 4, margin: 8, width: "92%"}} height={2} type="text" placeholder="username"/>
                   <input onChange={handleChange} name="password" class="row" style={{padding: 4, margin: 8, width: "92%"}} type="password" placeholder="password"/>
                   <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: 10}}>
-                    <Button onClick={initiateLogin}>{loginState ? "Logout" : "Login"}</Button><br/>
+                    <Button onClick={initiateLogin}>{loginRef.current ? "Logout" : "Login"}</Button><br/>
                   </div>
                   <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: 6}}>
                     <Button>Create Account</Button>
