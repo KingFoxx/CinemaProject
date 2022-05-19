@@ -20,6 +20,9 @@ const ComingSoon = () => {
             <Carousel.Caption>
               <h3 >The Lord of the Rings: The Fellowship of the Ring</h3>
               <p >Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className="text-gallery align-self-center">The Lord of the Rings: The Fellowship of the Ring</h3>
+              <p className="text-gallery align-self-center">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
