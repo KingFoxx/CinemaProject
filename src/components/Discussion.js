@@ -10,7 +10,8 @@ const formReducer = (state, event) => {
 }
 
 const Discussion=()=> {
-  const [loginRef, setLoginRef] = useRef(null);
+  const loginRef = useRef(null);
+  const [loginState, setLoginState] = useState(false);
 
   const [formData, setFormData] = useReducer(formReducer, {});
   const dis_obj = useRef([]);
@@ -54,6 +55,11 @@ const Discussion=()=> {
       setUseDis(res.data);
     });
     // console.log(dis_obj.current);
+      
+    loginRef.current = (JSON.parse(window.localStorage.getItem('loginRef')));
+    if (loginState == false) {
+      setLoginState(true);
+    }
   });
 
   const handleChange = event => {
@@ -73,7 +79,7 @@ const Discussion=()=> {
     <div>
 
       <h3 class="text-center" style={{marginTop: 12}}>Discussion Thread!</h3>
-      <button onClick={consoleLog}>Log state props</button>
+
       <hr/>
 
       <div className="collapsible">
@@ -86,7 +92,9 @@ const Discussion=()=> {
           <form onSubmit={handleSubmit}>
         <div class="container form-group">
           <div class="row form-control-sm">
-            <input onChange={handleChange} class="col" type="text" name="cus_name" placeholder="Your name" maxLength={40}/>
+            <input onChange={handleChange} class="col" type="text" name="cus_name" disabled
+            value={loginRef.current == null ? "Guest" : loginRef.current.name} maxLength={40}/>
+
             <div class="col"/>
             <div class="col container">
               <div class="row align-items-center">
