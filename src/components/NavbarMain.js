@@ -8,9 +8,9 @@ const NavbarMain=({film, i})=>{
   const [searchTerm,setSearchTerm] = useState('');
   const {searchRef, setSearchRef} = useRef([]);
   const navigate = useNavigate();
-    const handleClick = (index) => {
-        navigate("/FilmSearch/" + index);
-        window.localStorage.setItem('index', index);
+    const handleClick = (name) => {
+        window.localStorage.setItem('name', name);
+        navigate("/Search/");
     }
     return (
       <header>
@@ -44,7 +44,7 @@ const NavbarMain=({film, i})=>{
                   aria-label="Search"
                   onChange={e=>setSearchTerm(e.target.value)}
                 />
-                <Button onClick={() => handleClick(i)}variant="outline-success">Search</Button>
+                <Button onClick={() => handleClick(searchTerm)} variant="outline-success">Search</Button>
               </Form>
             </Navbar.Collapse>
           </Container>

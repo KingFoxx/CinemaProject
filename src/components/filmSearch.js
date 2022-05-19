@@ -2,11 +2,15 @@ import React,{useRef, useState} from 'react';
 import Film from '../Bookings/film.json';
 
 function Search(){
-   const searchIndex = useRef(window.localStorage.getItem('index'));
-    {Film.filter(object=>object.id=searchIndex)      
-        .map((object)=>{
-        return <div>{object.name}</div>
-      })}
+   const searchName = window.localStorage.getItem('name');
+   console.log("searchname: " + searchName);
+   const item = Film.filter(function(object) {
+     if (object.name === searchName) {
+       console.log("The searched object is: " + object);
+       console.log("And the object item is: " + object.name);
+     }
+   });
+   console.log(item);
 }
 
 export default Search;
