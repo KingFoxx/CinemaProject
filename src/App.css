@@ -260,3 +260,7 @@ body {
   
   }
 
+div#onNow div.carousel-caption{
+position: relative;
+text-align: center;
+}

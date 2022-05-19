@@ -1,7 +1,17 @@
+import React, {useState, useRef} from "react";
 import { Navbar, Nav, NavDropdown,Form,FormControl, Button, Container } from "react-bootstrap";
-import {BrowserRouter as Router, Switch, Route,Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route,Link, useNavigate} from "react-router-dom";
+import Film from "../Bookings/film.json"
+import filmSearch from "./filmSearch"
 
-const NavbarMain=()=>{
+const NavbarMain=({film, i})=>{
+  const [searchTerm,setSearchTerm] = useState('');
+  const {searchRef, setSearchRef} = useRef([]);
+  const navigate = useNavigate();
+    const handleClick = (name) => {
+        window.localStorage.setItem('name', name);
+        navigate("/Search/");
+    }
     return (
       <header>
         <div>
@@ -27,12 +37,14 @@ const NavbarMain=()=>{
               </Nav>
               <Form className="d-flex">
                 <FormControl
+                  id="search"
                   type="search"
                   placeholder="Search"
                   className="me-2"
                   aria-label="Search"
+                  onChange={e=>setSearchTerm(e.target.value)}
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button onClick={() => handleClick(searchTerm)} variant="outline-success">Search</Button>
               </Form>
             </Navbar.Collapse>
           </Container>

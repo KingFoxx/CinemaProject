@@ -1,5 +1,4 @@
 import { Carousel } from "react-bootstrap";
-import "../App.css";
 import lotr1 from "../Images/lotr1.jpg";
 import lotr2 from "../Images/lotr2.jpg";
 import lotr3 from "../Images/lotr3.jpg";
@@ -8,7 +7,7 @@ import lotr4 from "../Images/lotr4.jpg";
 
 const ComingSoon = () => {
   return (
-      <div className="App">
+      <div className="App" id="onNow">
         <h1 className="header">What's Currently on</h1><br/>
         <Carousel>
           <Carousel.Item>
@@ -19,8 +18,11 @@ const ComingSoon = () => {
               href
             />
             <Carousel.Caption>
+              <h3 >The Lord of the Rings: The Fellowship of the Ring</h3>
+              <p >Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
               <h3 className="text-gallery align-self-center">The Lord of the Rings: The Fellowship of the Ring</h3>
               <p className="text-gallery align-self-center">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>

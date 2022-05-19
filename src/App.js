@@ -1,5 +1,5 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import useCart from './hooks/use-cart';
 import CartContext from './Bookings/cart-context';
 import NavbarMain from "./components/NavbarMain";
@@ -20,6 +20,7 @@ import OnNow from "./components/OnNow";
 import FilmDetail from "./Bookings/FilmDetail";
 import Cart from "./Bookings/Cart";
 import Checkout from "./Bookings/Checkout"
+import Search  from "./components/filmSearch";
 
 
 
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/FilmDetail/:id" element={<FilmDetail/>}/>
           <Route path="/Cart" element={<Cart/>}/>
           <Route path="/Checkout" element={<Checkout/>}/>
+          <Route path="/Search" element={<Search/>}/>
         </Routes>
         <Footer/>
       </main>
