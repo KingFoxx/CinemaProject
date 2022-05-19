@@ -1,13 +1,24 @@
+import React, {useState, useRef} from "react";
 import { Navbar, Nav, NavDropdown,Form,FormControl, Button, Container } from "react-bootstrap";
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link, useNavigate} from "react-router-dom";
 import {useState, useReducer, useRef, useEffect, createContext, useContext} from 'react';
 import axios from 'axios';
+import Film from "../Bookings/film.json"
+import filmSearch from "./filmSearch"
 
 const formReducer = (state, event) => {
   return {...state, [event.name]: event.value}
 }
 
-const NavbarMain=()=>{
+const NavbarMain=({film, i})=>{
+    const [searchTerm,setSearchTerm] = useState('');
+    const {searchRef, setSearchRef} = useRef([]);
+    const navigate = useNavigate();
+    const handleClick = (name) => {
+        window.localStorage.setItem('name', name);
+        navigate("/Search/");
+    }
+    
     const [testState, setTestState] = useState(false);
 
     // Attempt to log user on app load (this page must load on app load)
@@ -111,12 +122,14 @@ const NavbarMain=()=>{
               </Nav>
               <Form className="d-flex">
                 <FormControl
+                  id="search"
                   type="search"
                   placeholder="Search"
                   className="me-2"
                   aria-label="Search"
+                  onChange={e=>setSearchTerm(e.target.value)}
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button onClick={() => handleClick(searchTerm)} variant="outline-success">Search</Button>
               </Form>
             </Navbar.Collapse>
           </Container>
