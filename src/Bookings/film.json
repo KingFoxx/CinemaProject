@@ -1,0 +1,40 @@
+[{ 
+    "id": "1",
+    "name": "Spider-Man",
+    "genre": "Action",
+    "classification": "PG",
+    "price":"5.99",
+    "concession":"3.99",
+    "image": "https://cdn.pocket-lint.com/r/s/970x/assets/images/159643-tv-news-spider-man-no-way-home-image1-dryautoefj-jpg.webp"
+},
+
+{ 
+    "id": "2", 
+    "name": "BatMan", 
+    "genre": "Action",
+    "classification": "PG",
+    "price":"5.99",
+    "concession":"3.99",
+    "image": "https://assets-prd.ignimgs.com/2022/01/26/thebatman-newbutton-1643232430643.jpg?width=300&dpr=2"
+},
+
+{ 
+    "id": "3", 
+    "name": "Top Gun", 
+    "genre": "Action", 
+    "classification": "PG",
+    "price":"5.99",
+    "concession":"3.99",
+    "image": "https://dx35vtwkllhj9.cloudfront.net/paramountpictures/top-gun/images/regions/us/share.png"
+},
+
+{ 
+    "id": "4", 
+    "name": "The Weekend Away", 
+    "genre": "Thriller", 
+    "classification": "PG",
+    "price":"5.99",
+    "concession":"3.99",
+    "image": "https://assets.whatsnewonnetflix.com/external_assets/sggkh+%5B%5Blxx*9*789*8831_8_muochl_mvg%5Bwmn%5Bzkr%5Be3%5BC805vQhtDYWV7zJyzMwnXCTFK*B%5BZZZZYwSA00nbnnmI9mwFdI%5D1uml0hOYdu1BuWHCdH30nva8oyGNPfkc5gN7Mzf8NuIPX0Vr%5D%5DEhyeY7B65YmpU%5DHBh4XeM9bocELuunLOUDzcyXjCyaIhYYqjVx%5DWCD1.jpg"
+}
+]

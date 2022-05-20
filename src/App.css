@@ -1,38 +1,271 @@
 .App {
+  height: 100%;
+  width:100%;
+  background-color: #616161;
+  overflow-x: hidden;
+  color:whitesmoke;
+}
+
+.OpeningTimes{
+  height: 80vh;
+  width:100%;
+  background-color: #616161;
+  color:whitesmoke;
+}
+
+.detailsCard{
+  background-color: #212429;
+  color:white;
+  margin-top: 5%;
+}
+.QaCinema{
+  width: auto;
+  height: 40vh;
+  max-height: 40vh;
+  margin: auto; 
+  display: block;
+}
+.header{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.StripeForm{
+  color: black;
+  text-decoration: white;
+  background-color: #fafafa;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.carousel-img{
+  width: auto;
+  height: 70vh;
+  max-height: 70vh;
+  margin: auto; 
+  display: block;
+  }
+
+  /* style the form*/
+ .form-container {
+  border-radius: 5px;
+  background-color: #212429;
+  padding: 20px;
+}
+.container-contact{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.card-text{
+  color: black;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  footer {
+    background-color: #212429;
+    font-family: "Rubik", sans-serif;
+    color: whitesmoke;
+    height: 20vh;
+    text-align: center;
+}
+
+  .bulletless-lists {
+  list-style-type: none;
+  text-align: center;
+  padding: 0; 
+  margin: 0; 
+}
+
+.newbody {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font: 500 100%/1.5 system-ui;
+}
+.newimg {
+  height: 300px;
+  width: 300px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.about-image {
+  max-width: 100%;
+  height: 5%;
+  max-height: 30vh;
+  border-radius: 5px;
+}
+
+.social-icon{
+  width: 32px;
+  height: 32px; 
+  border-radius: 50%; 
+  font-size: 13px; 
+  line-height: 7px;
+  text-align: center;
+  color: #fafafa;
+  background: #8f8f8f;
+  transition: all 0.35s ease-in-out;
+}
+
+.social-icon:hover {
+  background: #212429;
+
+}
+.footerLink {
+  color:rgb(69, 76, 82);
+  text-decoration: none;
+}
+.footerLink:hover {
+  color:rgb(195, 209, 221);
+  text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8f8f8f; 
+  border-radius: 20px;
+}
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+    
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #000000;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #030303;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+
+.itemTextCarousel {
+  text-align:center;
+  
+}
+.text-gallery{
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 20em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #2e2f35;
+  padding: 5px;
+  margin-bottom: 1em;
+  
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+div#onNow div.carousel-caption{
+position: relative;
+text-align: center;
+}
+
+.card-img-top{
+  min-height: 210px;
+  max-height: 210px;
 }

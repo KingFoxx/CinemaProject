@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# QA-Cinema 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Jira Board Link - [**Jira**](https://northerncreator.atlassian.net/jira/software/projects/QC/boards/6/backlog)
+Presentation Link - [**Presentation**](https://docs.google.com/presentation/d/1oQOSSObrIJ8hMgzoRVb1WkP1Aa-d9hJUKLs-lK2gk0o/edit#slide=id.g12c536c4085_0_1299)
 
-## Available Scripts
+## Introduction:
 
-In the project directory, you can run:
+For this project we created a working website that a user can view the cinema as well as book tickets for a movie of their choice. 
+* Visualisation - Balsamic Wireframe
+* Project Management - Jira was used to make a todo list for the project
+* Database - MySQL was used to have a relational database 
+* Java SE & React - Application backend completed through React following OOP
+* CSS, JS - Fronted completed with integrated API for fully functioning website
+* Testing - Testing of backend using integrated test suite
 
-### `npm start`
+### Planning
+Jira allowed to track the progress of the project through the use of user stories and tasks that you can see down below. These were then thrown into a sprint and followed and checked off as the days went by. Stories were organized into Epics and were blocked by tasks to ensure they were done correctly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Throughout the project build we completed various sprints, grouping the issues from epics to complete different sections.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once we had decided on our user stories we started to think about the design for the website. Using Balsamic we created a wireframe and stuck to this throughout front-end creation.
 
-### `npm test`
+___
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![img](https://i.imgur.com/mfAXKJp.png)
+<p align = "center">Jira</p> 
 
-### `npm run build`
+___
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![img](https://i.imgur.com/ReUwt2A.png)
+<p align = "center">Jira 2</p> 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+___
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![img](https://i.imgur.com/uO42LGw.png)
+<p align = "center"></p> 
 
-### `npm run eject`
+___
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Databases
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+MySQL was used to store the data that is provided by the user as well as information that we also stored for our use. Tables for "payment, discussion, movie, customer and booking were used for different features within our website. These inputs were tested during the initial phase via postman.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![img](https://i.imgur.com/zpjIRvA.png)
+<p align = "center">MYSQL</p>
 
-## Learn More
+___
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- 
+### Backend + Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Back End of the application was made in Eclipse using ******** and tests were created once the functionalities were done. Here is an example of a functionality test.
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+``` -->
+___
 
-### Analyzing the Bundle Size
+### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The front-end is built from CSS and JavaScript. We used the Bootstrap framework for various components. This helped us make the website more professional using forms. App.js, NavbarMain.js & footer.js were used to show keep a consistency across the project as they keep as consistent look for every new page created.
 
-### Making a Progressive Web App
+The JS and CSS are used to create the look of the website, we have used various features throughout the site to show off our skills such as using the carousel, bookings, log in functionality. 
+![img](https://i.imgur.com/CtAtzJu.png)
+<p align = "center">Home Page</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+___
 
-### Advanced Configuration
+![img](https://i.imgur.com/RsTTvle.png)
+<p align = "center">WelcomePage</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+___
 
-### Deployment
+___
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+#### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To run the application the following is required:
+
+1. [**Git**](https://gitforwindows.org/)
+2. [**Jira**](https://www.atlassian.com/software/jira)
+3. [**GitHub**](https://github.com/)
+4. [**MySQL**](https://dev.mysql.com/downloads/windows/installer/8.0.html)
+5. [**Java**](https://www.oracle.com/java/technologies/downloads/#java17)
+6. [**React**](https://reactjs.org/)
+7. [**VS Code**](https://code.visualstudio.com/)
+8. [**PostMan**](https://www.postman.com/downloads/)
+
+
+
+### Built With
+
+* Git
+* MySQL
+* Java
+* React
+* HTML
+* CSS
+* JS
+* MockMVC
+* Balsamic
+
+___
+
+### Authors
+* Mateusz 
+* Salman 
+* Devid Bakin - Scrum Master
+
+
+___
+### Credits
+[**Booking**](https://www.youtube.com/watch?v=wzQBhLcbU1k) Used to adapt to Bookings. 
+
+
