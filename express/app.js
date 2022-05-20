@@ -101,11 +101,11 @@ app.post("/discussion/create",function(req, res) {
 
     // This logic can be changed if we intend to implement more movies
     // i.e. this data can also be obtained from the database as another nested query
-    if (movie === "Movie 1") {
+    if (movie === "Spider-Man") {
         mov_id = 1;
-    } else if (movie === "Movie 2") {
+    } else if (movie === "Bat Man") {
         mov_id = 2;
-    } else if (movie === "Movie 3") {
+    } else if (movie === "Top Gun") {
         mov_id = 3;
     } else {
         mov_id = 4;
