@@ -26,15 +26,15 @@ const Discussion=()=> {
 
   const handleSubmit = event => {
       event.preventDefault();
-      console.log("Submit button was pressed");
-      // console.log(formData);
 
-      if (formData.cus_name == null || formData.movie == null || formData.title == null ||
+      loginRef.current = (JSON.parse(window.localStorage.getItem('loginRef')));
+
+      if (null || formData.movie == null || formData.title == null ||
           formData.description == null) {
         alert("Please complete the relevant fields");
       } else {
         let refPromise = axios.post("http://localhost:4040/discussion/create", {
-          cus_name : formData.cus_name,
+          cus_name : (loginRef.current == null ? "Guest" : loginRef.current.name),
           movie : formData.movie,
           title : formData.title,
           rating : formData.rating,
@@ -42,7 +42,7 @@ const Discussion=()=> {
         });
         // The response comes back as an object which can be useful
         refPromise.then((res) => {
-          console.log(res);
+          // console.log(res);
         });
       }
   }
@@ -68,12 +68,6 @@ const Discussion=()=> {
       name: event.target.name,
       value: event.target.value
     });
-    console.log(JSON.parse(window.localStorage.getItem('loginState')));
-  }
-
-  const consoleLog = () => {
-    console.log("This is state object with login details");
-    console.log(state);
   }
 
   return(
