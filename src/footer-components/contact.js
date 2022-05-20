@@ -1,4 +1,5 @@
 import emailjs from 'emailjs-com';
+import { Button } from 'react-bootstrap';
 import "../App.css";
 
 const Contact = () =>{
@@ -25,7 +26,7 @@ const Contact = () =>{
                     <label for="subject" className="form-input">Subject</label>
                     <textarea id="subject" name="inquiry_request" placeholder="Write something.." style={{height: 200 + 'px'}}
                         required></textarea>
-                    <input type="submit" value="send" name="inquiry_request" id="submit" />
+                    <Button type="submit" value="send" name="inquiry_request" id="submit">Send</Button>
                 </form>
             </div>
         </div>
