@@ -1,16 +1,16 @@
 import "..//App.css";
 import Exterior from "../Images/QA-HQ.jpg";
-import Parking from "../Images/Parking.png";
+import Parking from "../Images/Parking2.png";
 
 const GettingThere = () => {
   return (
 <div>
 <h1 className="header">How to get here?</h1><br/>
 <div className="newbody App">
-<img src={Exterior} alt="Screen1" className="newimg"/>
+<img src={Exterior} alt="Outside" className="newimg"/>
 <p>3rd Floor, International House, 1 St Katharine's Way,London E1W 1UN</p>
 
-    <img src={Parking} alt="Screen2"className="newimg" />
+    <img src={Parking} alt="Parking"className="newimg" />
     <p>Nearest Parking: Minories Car Park, 1 Shorter St, London E1 8LP</p>
 
         <p>Directions from TowerHill: Turn left onto Tower Hill Road as you exit

@@ -1,7 +1,5 @@
 # QA-Cinema 
 
-Devid Bakin 
-
 Jira Board Link - [**Jira**](https://northerncreator.atlassian.net/jira/software/projects/QC/boards/6/backlog)
 Presentation Link - [**Presentation**](https://docs.google.com/presentation/d/1oQOSSObrIJ8hMgzoRVb1WkP1Aa-d9hJUKLs-lK2gk0o/edit#slide=id.g12c536c4085_0_1299)
 
