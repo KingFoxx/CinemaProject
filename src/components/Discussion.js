@@ -96,10 +96,10 @@ const Discussion=()=> {
                 <span class="col"></span>
                 <select onChange={handleChange} class="col" name="movie">
                   <option selected="selected">-- Movie --</option>
-                  <option value="Movie 1">Movie 1</option>
-                  <option value="Movie 2">Movie 2</option>
-                  <option value="Movie 3">Movie 3</option>
-                  <option value="Movie 4">Movie 4</option>
+                  <option value="Spider-Man">Spider-Man</option>
+                  <option value="Bat Man">Bat Man</option>
+                  <option value="Top Gun">Top Gun</option>
+                  <option value="The Weekend Away">The Weekend Away</option>
                 </select>
               </div>
             </div>
