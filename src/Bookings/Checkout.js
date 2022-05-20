@@ -12,7 +12,7 @@ export default function Checkout(){
     const {cart} = useContext(CartContext);
     let length = cart.length - 1;
     return (
-        <div className="App">
+        <div className="App OpeningTimes">
 
             <h1 className="header">Place Booking Now</h1>
             <table width={'100%'} cellSpacing={0} cellPadding={0} >
