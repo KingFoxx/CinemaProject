@@ -264,3 +264,8 @@ div#onNow div.carousel-caption{
 position: relative;
 text-align: center;
 }
+
+.card-img-top{
+  min-height: 210px;
+  max-height: 210px;
+}
